@@ -200,18 +200,22 @@ ul {
         transform: scale(1);
     }
 
+
     4% {
         opacity: 1;
     }
+
 
     33% {
         opacity: 1;
         transform: scale(1.05);
     }
 
+
     37% {
         opacity: 0;
     }
+
 
     100% {
         opacity: 0;
@@ -255,7 +259,7 @@ ul {
 /* Services Section */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
@@ -404,10 +408,6 @@ footer {
 
 /* Updated Responsive Design */
 @media (max-width: 768px) {
-    .section-padding {
-        padding: 50px 0;
-    }
-
     .navbar .container {
         position: relative;
     }
