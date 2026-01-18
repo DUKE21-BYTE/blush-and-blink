@@ -1,0 +1,94 @@
+/* Social Connect Section (Gold Pills) */
+#connect {
+    background-color: var(--color-bg);
+}
+
+.social-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.social-pill {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    height: 60px;
+    transition: var(--transition);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #000;
+    border: 3px solid transparent; 
+    border-color: #d4af37; /* Metallic Gold Color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #d4af37;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    /* Gradient Border Effect */
+    background-image: linear-gradient(#000, #000), linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.pill-bar {
+    width: 100%;
+    height: 50px;
+    background: #000;
+    border: 2px solid #d4af37;
+    border-radius: 0 25px 25px 0;
+    border-top-left-radius: 25px; /* Slight curve to mesh with circle */
+    border-bottom-left-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px; /* Offset for the circle */
+    margin-left: 20px; /* Shift bar to right so circle overlaps */
+    box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.1);
+    background-image: linear-gradient(to bottom, rgba(50,50,50,0.5), rgba(0,0,0,1));
+}
+
+.pill-bar span {
+    color: #d4af37; /* Gold Text */
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+.social-pill:hover .icon-circle {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+}
+
+.social-pill:hover .pill-bar {
+    background: linear-gradient(to bottom, rgba(70,70,70,0.5), rgba(0,0,0,1));
+    border-color: #fcf6ba;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Adjust colors for specific networks if desired, but sticking to Gold/Black per image */
+.fa-whatsapp { color: #25D366; text-shadow: 0 0 5px rgba(37, 211, 102, 0.5); }
+.fa-instagram { color: #E1306C; text-shadow: 0 0 5px rgba(225, 48, 108, 0.5); }
+.fa-facebook-f { color: #1877F2; text-shadow: 0 0 5px rgba(24, 119, 242, 0.5); }
+.fa-tiktok { color: #fff; text-shadow: -2px 0 #00f2ea, 2px 0 #ff0050; }
+
+/* Override colors back to gold if the strict "Black/Gold" look is preferred over brand colors */
+/* Uncomment below to force ALL icons to be gold */
+.social-pill i { color: #d4af37 !important; text-shadow: none !important; }
